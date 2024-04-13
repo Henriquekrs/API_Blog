@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
@@ -23,12 +22,7 @@ const login = async (emailInput, passwordInput) => {
 };
 
 const createUser = async (displayName, email, password, image) => {
-  const dataUser = await User.create({
-    displayName,
-    email,
-    password,
-    image,
-  });
+  const dataUser = await User.create({ displayName, email, password, image });
   const payload = {
     email: dataUser.email,
     password: dataUser.password,
