@@ -16,5 +16,6 @@ route.post(
   userController.createUser,
 );
 route.get('/user', validateToken, userController.findAll);
+route.get('/user/:id', validateToken, userController.findById);
 
 module.exports = route;

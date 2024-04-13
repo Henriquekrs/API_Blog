@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
@@ -28,7 +29,6 @@ const createUser = async (displayName, email, password, image) => {
     password,
     image,
   });
-  console.log(dataUser);
   const payload = {
     email: dataUser.email,
     password: dataUser.password,
@@ -47,8 +47,17 @@ const findAll = async () => {
   return { status: 200, data: dataUser };
 };
 
+const findById = async (id) => {
+  const dataUser = await User.findByPk(id, { attributes: ['id', 'displayName', 'email', 'image'] });
+  if (!dataUser) {
+    return { status: 404, data: { message: 'User does not exist' } };
+  }
+  return { status: 200, data: dataUser };
+};
+
 module.exports = {
   login,
   createUser,
   findAll,
+  findById,
 };
