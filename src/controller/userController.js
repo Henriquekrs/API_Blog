@@ -21,7 +21,13 @@ const createUser = async (req, res) => {
   return res.status(status).json(data);
 };
 
+const findAll = async (req, res) => {
+  const { status, data } = await userService.findAll();
+  return res.status(status).json(data);
+};
+
 module.exports = {
   login,
   createUser,
+  findAll,
 };

@@ -39,10 +39,16 @@ const createUser = async (displayName, email, password, image) => {
     algorithm: 'HS256',
   });
 
-  return { status: 200, data: { token } };
+  return { status: 201, data: { token } };
+};
+
+const findAll = async () => {
+  const dataUser = await User.findAll({ attributes: ['id', 'displayName', 'email', 'image'] });
+  return { status: 200, data: dataUser };
 };
 
 module.exports = {
   login,
   createUser,
+  findAll,
 };
