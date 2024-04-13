@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    id: {
+      id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
-      display_name: {
+      displayName: {
         type: DataTypes.STRING,
       },
       email: {
@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       }
   }, {
     tableName: 'users',
-    timestamps: false
+    timestamps: false,
+    underscored: true
   });
   return User;
 };

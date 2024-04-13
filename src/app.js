@@ -12,7 +12,7 @@ app.get('/', (_request, response) => {
 
 app.use(express.json());
 
-app.use('', userRouter);
+app.use('/', userRouter);
 
 app.get('/ping', (req, res) => {
   res.status(200).json({ message: 'pong' });

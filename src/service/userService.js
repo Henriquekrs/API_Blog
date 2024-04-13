@@ -21,6 +21,28 @@ const login = async (emailInput, passwordInput) => {
   return { status: 200, data: { token } };
 };
 
+const createUser = async (displayName, email, password, image) => {
+  const dataUser = await User.create({
+    displayName,
+    email,
+    password,
+    image,
+  });
+  console.log(dataUser);
+  const payload = {
+    email: dataUser.email,
+    password: dataUser.password,
+  };
+
+  const token = jwt.sign(payload, process.env.JWT_SECRET, {
+    expiresIn: '1d',
+    algorithm: 'HS256',
+  });
+
+  return { status: 200, data: { token } };
+};
+
 module.exports = {
   login,
+  createUser,
 };
