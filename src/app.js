@@ -1,5 +1,5 @@
 const express = require('express');
-const { userRouter } = require('./routes');
+const { userRouter, categoryRouter } = require('./routes');
 
 // ...
 
@@ -13,6 +13,7 @@ app.get('/', (_request, response) => {
 app.use(express.json());
 
 app.use('/', userRouter);
+app.use('/categories', categoryRouter);
 
 app.get('/ping', (req, res) => {
   res.status(200).json({ message: 'pong' });
