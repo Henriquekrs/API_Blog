@@ -14,7 +14,14 @@ const findAll = async (req, res) => {
   return res.status(status).json(data);
 };
 
+const findById = async (req, res) => {
+  const { id } = req.params;
+  const { status, data } = await categoryService.findById(id);
+  return res.status(status).json(data);
+};
+
 module.exports = {
   create,
   findAll,
+  findById,
 };

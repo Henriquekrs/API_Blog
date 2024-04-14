@@ -1,5 +1,5 @@
 const express = require('express');
-const { userRouter, categoryRouter } = require('./routes');
+const { userRouter, categoryRouter, loginRouter, postRouter } = require('./routes');
 
 // ...
 
@@ -12,8 +12,10 @@ app.get('/', (_request, response) => {
 
 app.use(express.json());
 
-app.use('/', userRouter);
+app.use('/login', loginRouter);
+app.use('/user', userRouter);
 app.use('/categories', categoryRouter);
+app.use('/post', postRouter);
 
 app.get('/ping', (req, res) => {
   res.status(200).json({ message: 'pong' });

@@ -24,6 +24,7 @@ const login = async (emailInput, passwordInput) => {
 const createUser = async (displayName, email, password, image) => {
   const dataUser = await User.create({ displayName, email, password, image });
   const payload = {
+    id: dataUser.id,
     email: dataUser.email,
     password: dataUser.password,
   };

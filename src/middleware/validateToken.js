@@ -14,7 +14,7 @@ const validateToken = (req, res, next) => {
   
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(payload);
+    req.user = payload;
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

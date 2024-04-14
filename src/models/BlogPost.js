@@ -19,15 +19,17 @@ module.exports = (sequelize, DataTypes) => {
         }
       },
       published: {
-        type: DataTypes.DATE
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
       },
       updated: {
-        type: DataTypes.DATE
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
       }
   }, {
     tableName: 'blog_posts',
     timestamps: false,
-    underscored: true
+    underscored: true,
   });
 
   blogPostsModel.associate = (models) => {
