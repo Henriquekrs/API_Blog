@@ -10,5 +10,6 @@ route.post(
   validatePostCategories, 
   postController.createPost,
 );
+route.get('/', validateToken, postController.findAll);
 
 module.exports = route;

@@ -21,20 +21,21 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
     underscored: true
   });
-
   PostCategory.associate = (models) => {
+    //um post pode ter varias categorias
     models.BlogPost.belongsToMany(models.Category, {
-      as: 'categories',
       through: PostCategory,
       foreignKey: 'postId',
-      otherKey: 'categoryId'
-    });
+      otherKey: 'categoryId',
+      as: 'categories'
+    })
+    //uma categoria pode estar em varios post
     models.Category.belongsToMany(models.BlogPost, {
-      as: 'blogPosts',
       through: PostCategory,
       foreignKey: 'categoryId',
-      otherKey: 'postId'
-    });
-  };
+      otherKey: 'postId',
+      as: 'posts'
+    })
+  }
   return PostCategory;
 };
