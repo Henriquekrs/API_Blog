@@ -131,10 +131,10 @@ Passos para iniciar e usar o projeto:
 
 - Para utilização usando o Docker, dentro do terminal interativo rode os seguintes comandos:
   ```bash
-  npm run drop     <!-- garante que o bando de dados sera criado do zero -->
-  npm run predev   <!-- cria o banco de dados -->
-  npm run seed     <!-- popula o banco de dados com dados basicos para demonstração -->
-  npm run dev      <!-- coloca a api no ar -->
+  npm run drop     <!--garante que o bando de dados sera criado do zero-->
+  npm run predev   <!--cria o banco de dados-->
+  npm run seed     <!--popula o banco de dados com dados basicos para demonstração-->
+  npm run dev      <!--coloca a api no ar-->
   ```
 - Para utilizar de forma localmente basta rodar os seguintes comandos no terminal. Todos os comandos estão contidos no package.json:
 - ⚠️ Lembre-se de parar o container com nome de blogs_api para não dar conflito das portas serem usadas ao mesmo tempo
