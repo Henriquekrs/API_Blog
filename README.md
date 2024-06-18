@@ -116,6 +116,7 @@ Passos para iniciar e usar o projeto:
 
 - Ele te dará acesso ao terminal interativo do container criado pelo compose, que está rodando em segundo plano.
 
+
 ### Exemplos de uso
 
 - Para utilização usando o Docker, dentro do terminal interativo rode os seguintes comandos:
@@ -127,26 +128,14 @@ Passos para iniciar e usar o projeto:
      ```
   
 - Para utilizar de forma localmente basta rodar os seguintes comandos no terminal. Todos os comandos estão contidos no package.json:
-- ⚠️ Lembre-se de parar o container com nome de blogs_api para não dar conflito das serem usadas ao mesmo tempo
+- ⚠️ Lembre-se de parar o container com nome de blogs_api para não dar conflito das portas serem usadas ao mesmo tempo
     ```bash
     npm run drop     //garante que o bando de dados sera criado do zero
     npm run predev   //cria o banco de dados
     npm run seed     //popula o banco de dados com dados basicos para demonstração
     env $(cat .env) npm run dev     //coloca a api no ar
     ```
-- Por se tratar de uma API sem front-end desenvolvido as funcionalidades podem ser utilizadas atraves da extenção do VSCode ThunderClient ou similar. Esta API conta com as seguintes rotas:
-/login
-  .post
-/users
-  .post
-  .get
-/categories
-  .post
-  .get
-/post
-  .post
-  .get
-  .put
+- Por se tratar de uma API sem front-end desenvolvido as funcionalidades podem ser utilizadas atraves da extenção do VSCode ThunderClient ou similar.
   
 ## Contato
 
