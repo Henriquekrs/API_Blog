@@ -151,5 +151,5 @@ Passos para iniciar e usar o projeto:
 Se você tiver alguma dúvida, entre em contato:
 
 - **Gustavo Henrique**
-- Email: [ghrduarte@hotmail.com](mailto:ghrduarte@hotmail.com)
+- E-mail: [ghrduarte@hotmail.com](mailto:ghrduarte@hotmail.com)
 - GitHub: [henriquekrs](https://github.com/Henriquekrs)
