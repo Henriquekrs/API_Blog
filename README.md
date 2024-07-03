@@ -2,7 +2,7 @@
 
 ## Do que se trata esse projeto
 
-Este projeto foi desenvolvido durante minha formação no módulo de back-end na trybe. A aplicação se trata de uma API e um banco de dados para produção de conteúdos para um Blog ou outra aplicação web similar. A API conta com as principais funções de CRUD: Create (criar), Read (ler), Update (atualizar) e Delete (apagar).
+Este projeto foi desenvolvido durante minha formação no módulo de back-end na [Trybe](https://www.betrybe.com/). A aplicação se trata de uma API e um banco de dados para produção de conteúdos para um Blog ou outra aplicação web similar. A API conta com as principais funções de CRUD: Create (criar), Read (ler), Update (atualizar) e Delete (apagar).
 
 ## Principais linguagens e tecnologias utilizadas
 
